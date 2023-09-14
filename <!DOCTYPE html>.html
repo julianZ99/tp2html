@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trabajo Practico N1</title>
+</head>
+
+<body>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        <input type="text" name="firstName" placeholder="FirstName">
+        <br>
+        <input type="text" name="lastName" placeholder="Lastname">
+        <br>
+        <input type="number" name="age" placeholder="Age" min="0" max="100">
+        <br>
+        <input type="password" name="password" placeholder="Password">
+        <br>
+        <input type="text" name="email" placeholder="Your e-mail address">
+        <br>
+        <button type="submit">Send</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let ageRe = '^[0-9]+$';
+            let nameRe = /^([a-zA-Z ]){1,20}$/;
+            let emailRe = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+[^<>()\.,;:\s@\"]{2,})$/;
+
+
+            let name = document.forms["myForm"]["firstName"].value;
+            let lastName = document.forms["myForm"]["lastName"].value;
+            let email = document.forms["myForm"]["email"].value;
+            let age = document.forms["myForm"]["age"].value;
+
+            if (!nameRe.test(name)) {
+                alert("Name must be filled out, and needs to be less than 20 characters long.");
+                return false;
+            } else if (!nameRe.test(lastName)) {
+                alert("Last Name must be filled out, and needs to be less than 20 characters long.");
+                return false;
+            } else if(!ageRe.test.ageRe(age))
+            {
+                alert("Incorrect age");
+                return false;
+            } else if (!emailRe.test(email)) {
+                alert("Incorrect email address");
+                return false;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
