@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 2.1</title>
+    <link rel="stylesheet" href="styleSignUp.css">
+</head>
+
+<body>
+    <div>
+        <p>1. Forms with Regex verifications</p>
+    </div>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        <input type="text" name="firstName" placeholder="FirstName">
+        <br>
+        <input type="text" name="lastName" placeholder="Lastname">
+        <br>
+        <input type="number" name="age" placeholder="Age" min="0" max="100">
+        <br>
+        <input type="password" name="password" placeholder="Password">
+        <br>
+        <input type="text" name="email" placeholder="Your e-mail address">
+        <br>
+        <button type="submit">Send</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <script src="signup.js"></script>
+</body>
+
+</html>
